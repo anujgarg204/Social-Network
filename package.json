@@ -1,0 +1,40 @@
+{
+  "name": "social",
+  "version": "1.0.0",
+  "description": "",
+  "main": "version.js",
+  "dependencies": {
+    "async": "^2.6.2",
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.19.0",
+    "bson": "^1.1.1",
+    "debug": "^3.1.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "kareem": "^2.3.1",
+    "lodash": "^4.17.15",
+    "mongodb": "^3.3.2",
+    "mongoose": "^5.7.1",
+    "mongoose-legacy-pluralize": "^1.0.2",
+    "mpath": "^0.6.0",
+    "mquery": "^3.2.1",
+    "ms": "^2.1.2",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "regexp-clone": "^1.0.0",
+    "require_optional": "^1.0.1",
+    "resolve-from": "^2.0.0",
+    "safe-buffer": "^5.1.2",
+    "semver": "^5.7.1",
+    "sift": "^7.0.1",
+    "sliced": "^1.0.1",
+    "validator": "^11.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
