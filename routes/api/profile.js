@@ -5,8 +5,8 @@ const passport = require('passport');
 
 // Load Validation
 const validateProfileInput = require('../../validation/profile');
-// const validateExperienceInput = require('../../validation/experience');
-// const validateEducationInput = require('../../validation/education');
+const validateExperienceInput = require('../../validation/experience');
+const validateEducationInput = require('../../validation/education');
 
 // Load Profile Model
 const Profile = require('../../models/Profile');
@@ -65,7 +65,7 @@ router.get('/all', (req, res) => {
 
 router.get('/handle/:handle', (req, res) => {
     const errors = {};
-
+ 
     Profile.findOne({ handle: req.params.handle })
         .populate('user', ['name', 'avatar'])
         .then(profile => {
@@ -177,12 +177,12 @@ router.post(
 
         // Check Validation
         if (!isValid) {
-            // Return any errors with 400 status
+             // Return any errors with 400 status
             return res.status(400).json(errors);
         }
 
         Profile.findOne({ user: req.user.id }).then(profile => {
-            const newExp = {
+            const newExp = { 
                 title: req.body.title,
                 company: req.body.company,
                 location: req.body.location,
