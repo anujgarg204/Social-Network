@@ -17,14 +17,14 @@ module.exports = function validateLoginInput(data) {
         errors.email = 'Email is required'
     }
 
-    if (Validator.isEmpty(data.password)) {
-        errors.password = 'Password is required'
-    }
-
+    
     if (!Validator.isLength(data.password, { min: 6, max: 30 })) {
         errors.password = 'Password must be at least 6 char'
     }
-
+    
+    if (Validator.isEmpty(data.password)) {
+        errors.password = 'Password is required'
+    }
 
     return {
         errors,
