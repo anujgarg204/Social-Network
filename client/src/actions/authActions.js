@@ -10,5 +10,5 @@ export const registerUser = userData => dispatch => {
                 type: GET_ERRORS,
                 payload: err.response.data
             })
-        )
-}
+        );
+};
